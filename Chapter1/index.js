@@ -37,3 +37,27 @@ function statement(invoice, plays) {
   result += `you earned ${volumeCredits} credits\n`;
   return result;
 }
+const player = {
+  "hamlet": { "name": "Hamlet", "type": "tragedy"},
+  "as-like": { "name": "As You Like It", "type": "comedy"},
+  "hamlet": { "name": "Othello", "type": "tragedy"}
+}
+const invoices = {
+  "customer": "BigCo",
+  "performaces": [
+    {
+      "playID": "hamlet",
+      "audience": 55
+    },
+    {
+      "playID": "as-like",
+      "audience": 35
+    },
+    {
+      "playID": "Othello",
+      "audience": 40
+    }
+  ]
+}
+
+statement(invoices, player)
